@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "برشور آموزشی صنعت نوین معرق چرم",
+      "hasCanvas": false,
+      "bodyTextLen": 9200,
+      "bodyTextHash": "1f4f1a5d33ed2c9f0710a779359e2049f79f0d8ac4b2fba837221589c23a20f1",
+      "bodyTextPrefix": "برشور آموزشی صنعت نوین معرق چرم منطبق بر آموزه‌های کتاب — کد ۱-۰",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "برشور آموزشی صنعت نوین معرق چرم",
+      "hasCanvas": false,
+      "bodyTextLen": 9200,
+      "bodyTextHash": "1f4f1a5d33ed2c9f0710a779359e2049f79f0d8ac4b2fba837221589c23a20f1",
+      "bodyTextPrefix": "برشور آموزشی صنعت نوین معرق چرم منطبق بر آموزه‌های کتاب — کد ۱-۰",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
