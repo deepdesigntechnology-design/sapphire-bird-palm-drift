@@ -12,6 +12,9 @@
   --color-line: color-mix(in oklab, #3d2418 16%, transparent);
   --color-line-strong: color-mix(in oklab, #3d2418 28%, transparent);
   --color-danger: #8a2a22;
+  --color-hide: #e8d3b8;
+  --color-suede: #d8c2a6;
+  --color-thinner: #d7c4ad;
 
   --font-sans: "Vazirmatn", "Tahoma", "Segoe UI", system-ui, sans-serif;
   --font-display: "Noto Naskh Arabic", "Amiri", "Vazirmatn", serif;
@@ -28,8 +31,10 @@
     0px 10px 28px -16px rgba(61, 36, 24, 0.28);
 
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
   --motion-quick: 150ms;
   --motion-fast: 250ms;
+  --motion-y-base: 8px;
 }
 
 @layer base {
@@ -83,9 +88,19 @@
     radial-gradient(ellipse at 88% 92%, color-mix(in oklab, var(--color-leather) 8%, transparent), transparent 46%);
 }
 
-.spread {
-  break-inside: avoid;
-  scroll-margin-top: 7.5rem;
+.page-enter {
+  animation: page-in var(--motion-fast) var(--ease-smooth-out);
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--motion-y-base) * -1));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .no-scrollbar {
@@ -97,6 +112,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
+
   *,
   *::before,
   *::after {
@@ -116,7 +135,15 @@
     background: white;
   }
 
-  .spread {
+  .print-only {
+    display: block !important;
+  }
+
+  .screen-only {
+    display: none !important;
+  }
+
+  .print-spread {
     break-after: page;
     box-shadow: none !important;
   }
