@@ -18,6 +18,8 @@ import {
   ThreeLinesPage,
   ToolsPage,
   ToranjPage,
+  TechniquesPage,
+  VisualPage,
   WeavePage,
 } from "./pages";
 
@@ -45,6 +47,9 @@ function PrintAll({
         <GlossaryPage />
       </section>
       <section className="print-spread">
+        <VisualPage />
+      </section>
+      <section className="print-spread">
         <GoldenPage />
       </section>
       <section className="print-spread">
@@ -67,6 +72,9 @@ function PrintAll({
       </section>
       <section className="print-spread">
         <ProcessPage step={step} setStep={setStep} />
+      </section>
+      <section className="print-spread">
+        <TechniquesPage />
       </section>
       <section className="print-spread">
         <WeavePage />
@@ -161,6 +169,8 @@ export function Brochure() {
         return <IdentityPage />;
       case "glossary":
         return <GlossaryPage />;
+      case "visual":
+        return <VisualPage />;
       case "golden":
         return <GoldenPage />;
       case "threelines":
@@ -177,6 +187,8 @@ export function Brochure() {
         return <ToolsPage />;
       case "process":
         return <ProcessPage step={step} setStep={setStep} />;
+      case "techniques":
+        return <TechniquesPage />;
       case "weave":
         return <WeavePage />;
       case "finish":
