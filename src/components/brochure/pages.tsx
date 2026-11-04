@@ -91,7 +91,7 @@ export function ContentsPage({ go }: { go: (id: PageId) => void }) {
     <div className="space-y-8">
       <Head
         kicker="نقشه برشور"
-        title="پانزده صفحه، از جلد تا ایمنی"
+        title="هفده صفحه، از جلد تا ایمنی"
         body="هر صفحه یک آموزه فیکس‌شده کتاب است. شماتیک‌ها از دفتر استاد استخراج شده‌اند."
       />
       <ol className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -118,23 +118,21 @@ export function IdentityPage() {
   return (
     <div className="space-y-8">
       <Head
-        kicker="فصل ۱ — آگاهی پیش‌نیاز"
+        kicker="فصل ۱ — آگاهی و مهارت‌های پیش‌نیاز"
         title="این صنعت چیست و با سوخت چرم چه فرقی دارد؟"
-        body="شیوه‌ای تخصصی و مستقل در کار با چرم طبیعی ضخیم که از دهه ۱۳۸۰ به‌صورت نظام اجرایی مستقل شکل گرفت. رنگ پس از شکل‌گیری کامل ساختار زده می‌شود."
+        body="مستندات پروژه، خاستگاه شکل‌گیری این مسیر را در اصفهان و نیمه دهه ۱۳۷۰ نشان می‌دهد. صنعت نوین معرق چرم در ادامه به‌صورت هنرـ‌صنعتی مستقل با روش‌های اجرایی و نظام آموزشی مشخص تدوین شده است."
       />
       <DistinctionGrid />
       <div className="grid gap-5 lg:grid-cols-2">
         <Figure
           src="/images/workshop.jpg"
           alt="میز کار معرق چرم با پایه‌کار چوبی و قطعات چرمی"
-          caption="صنعت ثانویه: معرق روی پایه‌کار چوبی، سفالی یا هر بستر پذیرنده چسب اجرا می‌شود."
+          caption="اثر می‌تواند روی زیرکار مناسب و پذیرنده چسب، مانند چوب یا سفال، اجرا شود؛ این ویژگی کاربردی، هویت مستقل صنعت را تغییر نمی‌دهد."
         />
         <div className="space-y-4 rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
-          <h3 className="font-display text-xl">دو نوآوری کلیدی شیوه</h3>
+          <h3 className="font-display text-xl">سه روش اجرایی اختصاصی</h3>
           <p className="leading-8 text-muted">
-            بافت یا پیچ تریشه با نوار یک‌میلیمتری و نوارکشی کامل کادر؛ و فرمولاسیون رزین زیرکار همراه با مشته‌زنی دو
-            مرحله‌ای. نقش استاد میرزا آقا مهدی امامی اصفهانی در احیای سوخت معاصر برجسته است؛ صنعت نوین اما با انتقال
-            اندیشه بند معرق به چرم ضخیم مسیر جداگانه‌ای گشود.
+            پیچ/بافت تریشه؛ ساخت شکل‌های بسته با دورگیری (فارسی‌بُر)؛ و برجسته‌سازی چندسطحی به شیوه مطبق. این سه روش، ستون‌های فنی اصلی صنعت‌اند و در صفحه مستقل روش‌ها معرفی می‌شوند.
           </p>
           <p className="rounded-md bg-leather/10 px-3 py-2 text-sm leading-7 text-leather">
             ترتیب اجباری: اجرا ← تثبیت ← رنگ‌آمیزی. عبارت صحیح: «اجرای موتیف‌ها و اجرای بافت یا پیچ».
@@ -165,11 +163,67 @@ export function GlossaryPage() {
   );
 }
 
+export function VisualPage() {
+  return (
+    <div className="space-y-8">
+      <Head
+        kicker="فصل ۳ — مبانی هنرهای تجسمی و طراحی نقوش"
+        title="زبان بصری: عناصر و اصول ترکیب‌بندی"
+        body="پیش از طراحی نقوش و الگوسازی، هنرجو باید عناصر سازنده تصویر و روابط میان آن‌ها را بشناسد. این مبانی عمومی هنرهای تجسمی‌اند؛ نقاط طلایی و سه خط پایه در صفحات جداگانه به‌عنوان آموزه‌های اختصاصی مؤلف معرفی می‌شوند."
+      />
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          ["نقطه", "نشانه دیداری کوچک که می‌تواند کانون توجه یا آغاز سازمان‌دهی نقش باشد."],
+          ["خط", "مسیر حرکت نقطه؛ با جهت، ضخامت، طول و کیفیت مستقیم یا منحنی."],
+          ["سطح و شکل", "محدوده دوبعدی که با خط، لبه، رنگ یا تفاوت بافت تعریف می‌شود."],
+          ["فرم و حجم", "ساختار سه‌بعدی یا القای حجم با نور، سایه و اختلاف سطح."],
+          ["رنگ", "دارای فام، ارزش روشنایی و اشباع؛ رابطه رنگ‌ها بر خوانایی نقش اثر می‌گذارد."],
+          ["بافت", "کیفیت دیداری یا لمسی سطح که می‌تواند از خود ماده و شیوه اجرا پدید آید."],
+          ["فضا", "رابطه عناصر با محیط پیرامون، فاصله‌ها و عمق؛ شامل فضای مثبت و منفی."],
+          ["اندازه و جهت", "مقیاس و راستای عناصر که بر حرکت چشم و سلسله‌مراتب بصری اثر می‌گذارند."],
+        ].map(([t, d]) => (
+          <article key={t} className="rounded-xl bg-surface p-4 shadow-[var(--shadow-border)]">
+            <h3 className="font-display text-lg text-leather">{t}</h3>
+            <p className="mt-2 text-sm leading-7 text-muted">{d}</p>
+          </article>
+        ))}
+      </div>
+      <div className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <h3 className="font-display text-xl text-leather">اصول سازمان‌دهی و ترکیب‌بندی</h3>
+        <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+          {[
+            ["تعادل", "توزیع سنجیده وزن دیداری؛ متقارن، نامتقارن یا شعاعی."],
+            ["تناسب و مقیاس", "رابطه اندازه اجزا با یکدیگر و با کادر یا زیرکار."],
+            ["ریتم و تکرار", "تکرار منظم یا متنوع عناصر برای ایجاد حرکت و پیوستگی."],
+            ["تأکید و سلسله‌مراتب", "تعیین کانون اصلی و ترتیب هدایت نگاه."],
+            ["کنتراست", "ایجاد تمایز برای خوانایی و برجسته‌شدن عناصر."],
+            ["وحدت و هماهنگی", "پیوند اجزا در یک کل منسجم بدون یکنواختی ملال‌آور."],
+          ].map(([t, d]) => (
+            <li key={t} className="rounded-lg border border-line p-3 text-sm leading-7">
+              <strong>{t}:</strong> {d}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <article className="rounded-xl border border-line p-4">
+          <h3 className="font-medium text-leather">فضای مثبت</h3>
+          <p className="mt-2 text-sm leading-7 text-muted">بخش‌هایی که عناصر یا قطعات طرح در آن‌ها قرار می‌گیرند.</p>
+        </article>
+        <article className="rounded-xl border border-line p-4">
+          <h3 className="font-medium text-leather">فضای منفی</h3>
+          <p className="mt-2 text-sm leading-7 text-muted">فاصله‌ها و خلأهای پیرامون یا میان عناصر؛ شکل و پیوستگی آن به‌اندازه خود نقش اهمیت دارد.</p>
+        </article>
+      </div>
+    </div>
+  );
+}
+
 export function GoldenPage() {
   return (
     <div className="space-y-8">
       <Head
-        kicker="فصل ۲ — مبانی هنرهای تجسمی"
+        kicker="آموزه اختصاصی مؤلف — نقاط طلایی کادر"
         title="نقاط طلایی کادر و Super Gold Point"
         body="هر ضلع با دو نشانه به سه قسمت مساوی تقسیم می‌شود. خطوط فرضی به نقطه متناظر ضلع روبرو وصل می‌شوند. تلاقی، چهار نقطه طلایی است."
       />
@@ -275,7 +329,7 @@ export function CompositionPage() {
       <Figure
         src="/images/box.jpg"
         alt="جعبه چوبی با معرق چرم تمام‌شده"
-        caption="همان ترکیب‌بندی روی پایه‌کار حجمی — صنعت ثانویه."
+        caption="همان ترکیب‌بندی روی زیرکار حجمی؛ شیوه نصب اثر، هویت مستقل صنعت را تغییر نمی‌دهد."
         wide
       />
     </div>
@@ -314,7 +368,7 @@ export function LeatherPage() {
   return (
     <div className="space-y-8">
       <Head
-        kicker="فصل ۳ — شناخت چرم"
+        kicker="فصل ۲ — شناخت چرم، مواد اولیه و اصطلاحات تخصصی"
         title="گروه دو، ماده اصلی است"
         body="گروه یک (میشین، آستر، نبوک، رویه، کراست) لطیف است. گروه دو — کفی، زیره و کروپون از گاو و شتر — پایه این صنعت است."
       />
@@ -375,8 +429,8 @@ export function ProcessPage({ step, setStep }: { step: number; setStep: (n: numb
   return (
     <div className="space-y-8">
       <Head
-        kicker="فصل ۶ تا ۹ — زنجیره اجرایی"
-        title="سیزده مرحله که جابه‌جا نمی‌شوند"
+        kicker="فصل‌های ۶ تا ۸ — زنجیره اجرایی"
+        title="۱۲ گام اصلی اجرای اثر"
         body="کیفیت نهایی فقط به نقش وابسته نیست؛ به ترتیب عملیات وابسته است. هر مرحله شرط مرحله بعد است."
       />
       <ProcessFlow active={step} onSelect={setStep} />
@@ -392,6 +446,35 @@ export function ProcessPage({ step, setStep }: { step: number; setStep: (n: numb
           alt="انتقال الگوی کاغذی روی چرم"
           caption="از طرح تا چرم: اسکیل، الگوی کاغذی، تفکیک مثبت/منفی، انتقال با کاربن یا سوزن‌زنی."
         />
+      </div>
+    </div>
+  );
+}
+
+export function TechniquesPage() {
+  return (
+    <div className="space-y-8">
+      <Head
+        kicker="فصل ۷ — سه روش اجرایی اختصاصی"
+        title="سه ستون فنی صنعت نوین معرق چرم"
+        body="این سه روش، متمایز و مکمل‌اند. پیچ و بافت تریشه دو روش جدا نیستند؛ دو صورت اجرای یک روش واحدند."
+      />
+      <div className="grid gap-4 lg:grid-cols-3">
+        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+          <span className="font-display text-2xl text-brass">۱</span>
+          <h3 className="mt-2 font-display text-xl text-leather">پیچ/بافت تریشه</h3>
+          <p className="mt-3 text-sm leading-8 text-muted">نوار تریشه حدود یک میلی‌متر در مسیرهای تعریف‌شده طرح پیچانده یا بافته می‌شود. بافت منظم، نامنظم و درختی از صورت‌های اجرایی این روش‌اند.</p>
+        </article>
+        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+          <span className="font-display text-2xl text-brass">۲</span>
+          <h3 className="mt-2 font-display text-xl text-leather">شکل‌های بسته با دورگیری (فارسی‌بُر)</h3>
+          <p className="mt-3 text-sm leading-8 text-muted">فرم‌های بسته با نوارهای دورگیر و اتصال فارسی‌بُر ساخته می‌شوند. عرض‌های آموزشی حدود ۲ تا ۵ میلی‌متر است و زاویه برش با اندازه و وضعیت قطعه تغییر می‌کند.</p>
+        </article>
+        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+          <span className="font-display text-2xl text-brass">۳</span>
+          <h3 className="mt-2 font-display text-xl text-leather">برجسته‌سازی چندسطحی به شیوه مطبق</h3>
+          <p className="mt-3 text-sm leading-8 text-muted">با لایه‌گذاری فوم و کراست نازک بزی، اختلاف سطح و برجستگی ایجاد می‌شود. ابزار مخط برای شکل‌دهی و خواباندن لایه‌ها در این روش به‌کار می‌رود؛ جزئیات اجرا باید طبق آموزش مؤلف رعایت شود.</p>
+        </article>
       </div>
     </div>
   );
@@ -423,7 +506,7 @@ export function FinishPage() {
   return (
     <div className="space-y-8">
       <Head
-        kicker="فصل ۸ و ۹ — چسب، رنگ، خال، روسازی"
+        kicker="فصل ۷ — تثبیت، رنگ‌آمیزی و روسازی"
         title="چسب آهن، رزین ۱:۶، رنگ مخصوص، خال طلایی"
         body="چسب آهن ماده متصل‌کننده اصلی است. رنگ‌آمیزی پس از خشکی کامل. خال‌زنی مرحله مستقل پیش از روسازی است. روغن‌دهی پس از رنگ از کتاب حذف شده."
       />
@@ -480,7 +563,7 @@ export function SafetyPage() {
         <p className="text-sm text-brass">گروه خلاقیت‌های تجسمی ایده — عرصه سیمرغ — اصفهان</p>
         <p className="mt-2 font-display text-2xl">صنعت نوین معرق چرم</p>
         <p className="mt-3 max-w-2xl text-sm leading-8 text-paper/80">
-          این برشور خلاصه کاربردی درسنامه است، نه جایگزین کتاب کامل. منبع: کتاب یکپارچه ده‌فصلی، نمودار گردشی ۱۳ مرحله،
+          این برشور خلاصه کاربردی درسنامه است، نه جایگزین کتاب کامل. منبع: ساختار مرجع هشت‌فصلی کتاب، زنجیره ۱۲ گام اصلی،
           تعاریف فیکس‌شده و دیکته‌های دفتر استاد.
         </p>
         <p className="mt-4 text-xs text-paper/60">پدیدآورنده شیوه: استاد افشین خلیلی</p>
