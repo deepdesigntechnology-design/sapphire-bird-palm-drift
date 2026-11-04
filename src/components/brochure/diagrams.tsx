@@ -504,7 +504,7 @@ export function AdlChart() {
 export function DistinctionGrid() {
   const rows = [
     ["ماده اصلی", "چرم کفی، زیره و کروپون ضخیم", "ورق بسیار نازک رخ"],
-    ["بستر اجرا", "زیرکارهای متنوع — صنعت ثانویه", "جلد یا تابلو سنتی"],
+    ["بستر اجرا", "زیرکار مناسب و پذیرنده چسب، متناسب با اثر", "جلد یا تابلو سنتی"],
     ["زمان رنگ", "پس از تثبیت کامل ساختار", "همزمان یا پیشین"],
   ];
   return (
@@ -535,17 +535,10 @@ export function DistinctionGrid() {
 
 export function ResinRatios() {
   return (
-    <div className="grid gap-3 sm:grid-cols-2">
-      <div className="rounded-xl border border-brass/40 bg-brass/10 p-4">
-        <p className="text-xs tracking-wide text-muted">رزین زیرکار — مرحله تثبیت</p>
-        <p className="mt-1 font-display text-2xl text-ink">۱ به ۶</p>
-        <p className="mt-1 text-sm text-muted">چسب چوب به آب. پس از تکمیل کامل معرق.</p>
-      </div>
-      <div className="rounded-xl border border-line bg-surface p-4">
-        <p className="text-xs tracking-wide text-muted">غوطه‌وری محلول چسب چوب</p>
-        <p className="mt-1 font-display text-2xl text-ink">۱ به ۵</p>
-        <p className="mt-1 text-sm text-muted">مرحله‌ای جدا؛ با رزین ۱:۶ ادغام نشود.</p>
-      </div>
+    <div className="rounded-xl border border-brass/40 bg-brass/10 p-4">
+      <p className="text-xs tracking-wide text-muted">نسبت قطعی رزین زیرکار</p>
+      <p className="mt-1 font-display text-2xl text-ink">۱ به ۶</p>
+      <p className="mt-1 text-sm text-muted">یک واحد چسب چوب به شش واحد آب؛ همین نسبت در تمام بخش‌های آموزش و اجرای رزین زیرکار ملاک است.</p>
     </div>
   );
 }
